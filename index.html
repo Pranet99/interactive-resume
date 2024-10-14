@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V Praneeth | Automation Test Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        
+        /* Main Container */
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        /* Header Section (Full-Screen Hero) */
+        header {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        header p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+        }
+        header .btn {
+            background-color: #fff;
+            color: #0072ff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        header .btn:hover {
+            background-color: #0072ff;
+            color: white;
+        }
+
+        /* About Section */
+        section#about {
+            padding: 60px 0;
+            background-color: #fff;
+            text-align: center;
+        }
+        section#about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        section#about p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Experience Section with Timeline */
+        section#experience {
+            padding: 60px 0;
+            background-color: #f4f4f9;
+        }
+        section#experience h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #0072ff;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .timeline-entry {
+            padding: 20px 40px;
+            position: relative;
+            width: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .timeline-entry:hover {
+            transform: scale(1.05);
+        }
+        .timeline-entry.left {
+            left: 0;
+        }
+        .timeline-entry.right {
+            left: 50%;
+        }
+        .timeline-entry.left::before {
+            content: ' ';
+            position: absolute;
+            top: 20px;
+            right: -6px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent transparent transparent #0072ff;
+        }
+        .timeline-entry.right::before {
+            content: ' ';
+            position: absolute;
+            top: 20px;
+            left: -6px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent #0072ff transparent transparent;
+        }
+        .timeline-entry h3 {
+            font-size: 1.5rem;
+            color: #0072ff;
+            margin-bottom: 10px;
+        }
+        .timeline-entry p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Skills Section */
+        section#skills {
+            padding: 60px 0;
+            text-align: center;
+        }
+        section#skills h2 {
+            margin-bottom: 40px;
+        }
+        .skills-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .skill-bar {
+            background-color: #e0e0e0;
+            border-radius: 20px;
+            width: 80%;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .skill-bar-inner {
+            background-color: #0072ff;
+            height: 20px;
+            border-radius: 20px;
+            width: 0;
+            transition: width 1.5s ease-in-out;
+        }
+        .skill {
+            text-align: left;
+            padding-left: 20px;
+            font-weight: bold;
+        }
+
+        /* Projects Section */
+        section#projects {
+            padding: 60px 0;
+            background-color: #f4f4f9;
+        }
+        section#projects h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .project-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .project-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+        .project-card h3 {
+            color: #0072ff;
+            margin-bottom: 10px;
+        }
+        .project-card p {
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>V Praneeth</h1>
+        <p>Automation Test Engineer | Expert in Selenium, API Testing, and CI/CD</p>
+        <a href="#about" class="btn">Discover More</a>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>With 5 years of experience in test automation, I specialize in using Selenium, API testing with Postman and RestAssured, and integrating test frameworks into CI/CD pipelines. I have a passion for problem-solving and driving efficient test processes in Agile environments.</p>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="timeline">
+            <div class="timeline-entry left">
+                <h3>Automation Test Engineer</h3>
+                <p>XYZ Technologies (2019 - Present)<br>
+                - Designed and implemented a scalable automation testing framework using Selenium WebDriver (Java).<br>
+                - Integrated automated testing into Jenkins CI/CD pipelines, ensuring efficient software delivery.<br>
+                - Developed BDD test scenarios using Cucumber to enhance collaboration and clarity.</p>
+            </div>
+            <div class="timeline-entry right">
+                <h3>Automation Test Engineer</h3>
+                <p>ABC Corp (2017 - 2019)<br>
+                - Created automated test suites with Selenium and TestNG, improving testing efficiency by 30%.<br>
+                - Spearheaded API testing efforts using Postman and RestAssured to ensure functionality and performance.<br>
+                - Actively participated in Agile ceremonies, refining user stories to align with testing efforts.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                Selenium WebDriver
+                <div class="skill-bar">
+                    <div class="skill-bar-inner" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                API Testing (Postman, RestAssured)
+                <div class="skill-bar">
+                    <div class="skill-bar-inner" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                Cucumber Framework
+                <div class="skill-bar">
+                    <div class="skill-bar-inner" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                CI/CD (Jenkins, Git)
+                <div class="skill-bar">
+                    <div class="skill-bar-inner" style="width: 75%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>E-Commerce Automation Framework</h3>
+                <p>Developed a comprehensive automation framework for an e-commerce platform, automating over 300 test cases, which reduced regression testing time by 50%.</p>
+            </div>
+            <div class="project-card">
+                <h3>API Testing for Banking Services</h3>
+                <p>Created a robust suite for API testing to validate the integrity and performance of banking services, leading to a 30% reduction in post-deployment defects.</p>
+            </div>
+            <div class="project-card">
+                <h3>ServiceNow ATF for ITSM</h3>
+                <p>Leveraged ServiceNow ATF to automate functional testing of ITSM processes, achieving a 40% reduction in testing time and enhancing service delivery efficiency.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Connect with me: praneethv65@gmail.com | LinkedIn: linkedin.com/in/yourprofile</p>
+    </footer>
+
+</body>
+</html>
